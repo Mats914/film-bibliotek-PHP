@@ -1,0 +1,145 @@
+/* Enkel reset för att nollställa marginaler och padding samt sätta box-sizing */
+* {
+    box-sizing: border-box;  /* Gör så att padding och border räknas in i elementets totala bredd/höjd */
+    margin: 0;               /* Tar bort standardmarginal */
+    padding: 0;              /* Tar bort standardpadding */
+    font-family: Arial, sans-serif; /* Sätter standardtypsnitt */
+}
+
+/* Body - sidan bakgrund och textfärg */
+body {
+    background-color: #f5f5f5; /* Ljusgrå bakgrundsfärg */
+    color: #333;               /* Mörkgrå textfärg */
+    padding: 20px;             /* Lite luft runt innehållet */
+}
+
+/* H1 - huvudrubrik centrerad och med marginal */
+h1 {
+    text-align: center;      /* Centrerar texten */
+    margin-bottom: 30px;     /* Avstånd under rubriken */
+    color: #2c3e50;          /* Mörkblå färg */
+}
+
+/* Tabellens utseende */
+table {
+    width: 90%;                   /* Tabellens bredd */
+    margin: 0 auto 40px auto;     /* Centrerar tabellen och ger marginal under */
+    border-collapse: collapse;   /* Tar bort dubbelgränser mellan celler */
+    background-color: #fff;       /* Vit bakgrund i tabellen */
+    box-shadow: 0 0 10px rgba(0,0,0,0.1); /* Lägger till skugga för djup */
+}
+
+/* Tabellceller padding, border och textjustering */
+table th, table td {
+    padding: 12px 15px;       /* Luft inuti cellerna */
+    border: 1px solid #ddd;   /* Ljusgrå kant runt cellerna */
+    text-align: left;         /* Texten vänsterjusteras */
+}
+
+/* Tabellrubriker bakgrund och textfärg */
+table th {
+    background-color: #2980b9; /* Blå bakgrundsfärg */
+    color: white;              /* Vit text */
+}
+
+/* Varannan rad i tabellen får en ljusblå bakgrund för tydlighet */
+table tr:nth-child(even) {
+    background-color: #f2f9ff;
+}
+
+/* Länkar (Edit, Delete) - stil och hover-effekt */
+a {
+    color: #2980b9;            /* Blå text */
+    text-decoration: none;     /* Ingen understrykning */
+    font-weight: bold;         /* Fetstil */
+}
+
+a:hover {
+    text-decoration: underline; /* Understrykning vid hover */
+}
+
+/* Formulärets stil */
+form {
+    width: 90%;                   /* Bredd */
+    max-width: 600px;             /* Maxbredd */
+    margin: 0 auto 40px auto;     /* Centrering och marginal under */
+    background-color: #fff;       /* Vit bakgrund */
+    padding: 20px 25px;           /* Inre marginal */
+    box-shadow: 0 0 8px rgba(0,0,0,0.1); /* Lätt skugga */
+    border-radius: 6px;           /* Rundade hörn */
+}
+
+/* Stil för text- och nummerfält */
+input[type="text"],
+input[type="number"] {
+    width: 100%;              /* Full bredd */
+    padding: 10px 12px;       /* Inre marginal */
+    margin: 6px 0 15px 0;     /* Marginal över och under */
+    border: 1px solid #ccc;   /* Ljusgrå kant */
+    border-radius: 4px;       /* Rundade hörn */
+    font-size: 16px;          /* Textstorlek */
+}
+
+/* Knappar stil och hover-effekt */
+button {
+    background-color: #2980b9; /* Blå bakgrund */
+    color: white;              /* Vit text */
+    padding: 12px 20px;        /* Inre marginal */
+    border: none;              /* Ingen kant */
+    border-radius: 4px;        /* Rundade hörn */
+    cursor: pointer;           /* Pekare vid hover */
+    font-size: 16px;           /* Textstorlek */
+}
+
+button:hover {
+    background-color: #1f6391; /* Mörkare blå vid hover */
+}
+
+/* Grupp av radioknappar - marginal nedåt */
+.radio-group {
+    margin-bottom: 20px;
+}
+
+/* Etiketter till radioknappar - avstånd mellan */
+.radio-group label {
+    margin-left: 5px;
+    margin-right: 15px;
+    font-weight: normal; /* Normal vikt */
+}
+
+/* Stil för felmeddelanden */
+.error {
+    color: #c0392b;          /* Röd färg */
+    margin-bottom: 15px;     /* Marginal under */
+    text-align: center;      /* Centrerad text */
+}
+
+/* Stil för "Tillbaka"-länk */
+.back-link {
+    display: block;          /* Blockelement för egen rad */
+    text-align: center;      /* Centrerad */
+    margin-top: 25px;        /* Marginal ovanför */
+    color: #2980b9;          /* Blå text */
+    font-weight: bold;       /* Fetstil */
+}
+
+.back-link:hover {
+    text-decoration: underline; /* Understrykning vid hover */
+}
+
+/* Responsiv design för mobil (maxbredd 600px) */
+@media (max-width: 600px) {
+    table, form {
+        width: 100%;  /* Full bredd på små skärmar */
+    }
+
+    input[type="text"],
+    input[type="number"] {
+        font-size: 14px; /* Mindre textstorlek */
+    }
+
+    button {
+        width: 100%;    /* Knappar full bredd */
+        font-size: 14px; /* Mindre textstorlek */
+    }
+}
